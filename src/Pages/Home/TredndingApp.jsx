@@ -1,11 +1,17 @@
 import React from 'react';
 import { CiStar } from 'react-icons/ci';
 import { RxDownload } from 'react-icons/rx';
-import { useLoaderData, useNavigation } from 'react-router';
+import { Link } from 'react-router';
+import { FadeLoader, HashLoader } from 'react-spinners';
+import UseApps from '../../Hooks/UseApps';
 
+
+  
 const TredndingApp = () => {
-    const data = useLoaderData();
-    const navigation = useNavigation();
+    // const data = useLoaderData();
+
+    // const navigation = useNavigation();
+  const{apps,loading}=UseApps();
 
     return (
         <>
@@ -15,16 +21,16 @@ const TredndingApp = () => {
         </div>
 
         <div className='w-11/12 mx-auto '>
-            <h1>Total Apps : {data.length}</h1>
+            <h1>Total Apps : {apps.length}</h1>
 
             {/* ✅ Spinner */}
-            {navigation.state === "loading" ? (
+            {loading ? (
                 <div className='flex justify-center items-center h-40'>
-                    <span className="loading loading-spinner loading-lg"></span>
+                    <span className=" "><HashLoader color='#632ee3'/></span>
                 </div>
             ) : (
                 <div className='mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mt-8'>
-                    {data.map(item => (
+                    {apps.map(item => (
                         <div key={item.id} className='card-body card-border bg-white rounded-md shadow-sm gap-3 w-fit'>
                             <img src={item.image} alt='loading' className='h-75 w-full rounded-md' />
                             <p className='text-left text-lg font-semibold'>{item.title}</p>
@@ -38,10 +44,18 @@ const TredndingApp = () => {
                                 </span>
                             </div>
                         </div>
+                        
                     ))}
+                     
                 </div>
+                
             )}
         </div>
+      <div className='w-11/12 mx-auto text-center mt-10 mb-15'>
+           <Link className='btn btn-success text-white' to='/apps'>
+            See All Apps
+        </Link>
+      </div>
         </>
     );
 };
