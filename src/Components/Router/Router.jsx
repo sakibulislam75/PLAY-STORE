@@ -22,13 +22,13 @@ const Router = createBrowserRouter([
                 Component: Apps
             },
             {
-                path: "/Apps/:id",
-                loader:async({params})=>{
-                    const res=await fetch('/data.json');
-                    const data=await res.json();
-                    return data.find(item=>item.id===parseInt(params.id));
+                path: "/Apps/:id",//Apps নামটা যেকোনো হতে পারে, id টা অবশ্যই থাকতে হবে(সাধারণত page/content অনুযায়ী নাম দেওয়া হয়)
+               /* loader: async ({ params }) => {
+                    const res = await fetch('/data.json');
+                    const data = await res.json();
+                    return data.find(item => item.id === parseInt(params.id));
                     // params.id = "1"  // string
-                },
+                },*/
                 Component: AppDetails
             }
             ,

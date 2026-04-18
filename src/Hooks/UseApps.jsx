@@ -11,7 +11,7 @@ const UseApps = () => {
                setTimeout(() => {
                    setApps(dt);
                    setLoading(false);
-               }, 1000);
+               }, 100);
            };
            data();
            }, [])

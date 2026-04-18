@@ -29,10 +29,10 @@ const TredndingApp = () => {
                     <span className=" "><HashLoader color='#632ee3'/></span>
                 </div>
             ) : (
-                <div className='mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mt-8'>
+                <div className='mx-auto grid grid-cols-1 md:grid-cols-4 gap-7 mt-8 '>
                     {apps.map(item => (
-                        <div key={item.id} className='card-body card-border bg-white rounded-md shadow-sm gap-3 w-fit'>
-                            <img src={item.image} alt='loading' className='h-75 w-full rounded-md' />
+                        <Link to={`/apps/${item.id}`} key={item.id} className='card-body card-border bg-white rounded-md shadow-sm gap-3 w-fit hover:scale-[1.02] transition-transform duration-1000 ease-in-out'>
+                            <img src={item.image} alt='loading' className='h-67  w-70 rounded-md' />
                             <p className='text-left text-lg font-semibold'>{item.title}</p>
 
                             <div className='flex justify-between text-sm '>
@@ -43,7 +43,7 @@ const TredndingApp = () => {
                                     <CiStar /> {item.ratingAvg}
                                 </span>
                             </div>
-                        </div>
+                        </Link>
                         
                     ))}
                      
