@@ -1,5 +1,7 @@
 import React from 'react';
 import bannerImg from '../../assets/images/hero.png';
+import { BiLogoPlayStore } from 'react-icons/bi';
+import { FaAppStore } from 'react-icons/fa';
 const Banner = () => {    
   return (
   <div className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-100 pt-7  ">
@@ -16,12 +18,14 @@ const Banner = () => {
     </p>
 
     <div className="mt-6 flex justify-center gap-4">
-      <button className="px-5 py-2 bg-white border rounded-lg">
-        Google Play
+      <button className="px-5 py-2 bg-white border rounded-lg flex items-center gap-2">
+   <span>    <BiLogoPlayStore className='text-xl'/></span>
+   <span> Google Play</span>
       </button>
 
-      <button className="px-5 py-2 bg-white border rounded-lg">
-        App Store
+      <button className="px-5 py-2 bg-white border rounded-lg flex gap-1.5 items-center">
+        <span><FaAppStore className='text-xl'></FaAppStore></span>
+        <span>App Store</span>
       </button>
     </div>
   </div>

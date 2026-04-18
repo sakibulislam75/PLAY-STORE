@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { FaDownload, FaRegCommentDots, FaStar } from 'react-icons/fa';
 import { useContext } from 'react';
 import { InstalledAppsContext } from '../../Context/InstalledAppsContext';
+import { toast } from 'react-toastify';
 
 const AppDetails = () => {
     // const appDeta =useLoaderData();
@@ -20,6 +21,7 @@ const AppDetails = () => {
     const handleInstall = () => {
         if (expectedApp && !installedApps.find(item => item.id === parseInt(id))) {
             setInstalledApps([...installedApps, expectedApp]);
+        toast.success('App installed successfully!');
         }
     }
     console.log('installedApps:', installedApps.length);

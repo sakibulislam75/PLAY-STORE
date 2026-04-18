@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { InstalledAppsContext } from './InstalledAppsContext';
-
 const InstalledAppsProvider = ({ children }) => {
     const [installedApps, setInstalledApps] = useState([]);
     const data = {
@@ -10,6 +9,7 @@ const InstalledAppsProvider = ({ children }) => {
     return (
         <div>
             <InstalledAppsContext.Provider value={data}>{children}</InstalledAppsContext.Provider>
+              
         </div>
     );
 };

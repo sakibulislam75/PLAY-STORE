@@ -1,20 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-
+import ntFoundImg from '../../assets/images/error-404.png'
 const Notfound = () => {
     const navigate = useNavigate();
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-center px-4">
       
-      <h1 className="text-6xl font-bold text-red-500">404</h1>
-
-      <h2 className="text-2xl font-semibold mt-4 text-gray-800">
-        Page Not Found
-      </h2>
-
-      <p className="text-gray-500 mt-2">
-        The page you are looking for doesn’t exist or has been moved.
-      </p>
+     <img src={ntFoundImg} alt="" />
 
       <button
         onClick={() => navigate('/')}
