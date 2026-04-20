@@ -23,7 +23,7 @@ const TredndingApp = () => {
         <div className='w-11/12 mx-auto '>
             <h1>Total Apps : {apps.length}</h1>
 
-            {/* ✅ Spinner */}
+            {/*  Spinner */}
             {loading ? (
                 <div className='flex justify-center items-center h-40'>
                     <span className=" "><HashLoader color='#632ee3'/></span>

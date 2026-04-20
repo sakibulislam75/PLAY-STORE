@@ -26,6 +26,7 @@ const Navbar = () => {
            <MyNavLink to='/'>Home</MyNavLink>
             <MyNavLink to='/Apps'>Apps</MyNavLink>
             <MyNavLink to='/Installation'>Installation</MyNavLink>
+            <MyNavLink to='/Dashboard'>Dashboard</MyNavLink>
 
           </div>
           <div className="navbar-end flex gap-1 ">
@@ -40,6 +41,7 @@ const Navbar = () => {
               <MyNavLink to='/Apps'>Apps</MyNavLink>
             </li>
             <li>  <MyNavLink to='/Installation'>Installation</MyNavLink></li>
+            <li> <MyNavLink to='/Dashboard'>Dashboard</MyNavLink></li>
           </ul>
         </div>
       </div>
