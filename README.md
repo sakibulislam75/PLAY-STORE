@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📱 SK Play Store
+# 📱  Play Store
 
 **A modern, responsive app marketplace UI built with React — browse, explore, and discover mobile apps with ease.**
 
