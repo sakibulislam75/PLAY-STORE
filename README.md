@@ -1,16 +1,107 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📱 SK Play Store
 
-Currently, two official plugins are available:
+**A modern, responsive app marketplace UI built with React — browse, explore, and discover mobile apps with ease.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white)](https://reactrouter.com)
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+SK Play Store is a Google Play-inspired app marketplace built as a frontend project. It loads apps from a local JSON dataset and lets users browse listings and view full app details on dedicated pages.
+
+The focus is on clean UI design, dynamic rendering, and a smooth routing experience.
+
+---
+
+## Features
+
+- Browse a collection of apps with images, ratings, and categories
+- Dedicated detail page for each app
+- Category-based app organization
+- Fully responsive across mobile, tablet, and desktop
+- Fast dev experience powered by Vite
+
+---
+
+## Tech Stack
+
+| Layer | Tool |
+|---|---|
+| UI | React 19 |
+| Build | Vite |
+| Styling | Tailwind CSS |
+| Routing | React Router DOM |
+| Data | Local JSON (`public/data.json`) |
+
+---
+
+## Project Structure
+
+```
+SK-PLAY-STORE/
+├── public/
+│   └── data.json
+└── src/
+    ├── Components/
+    │   ├── AppCard/
+    │   └── AppDetails/
+    ├── Pages/
+    ├── Router/
+    ├── App.jsx
+    └── main.jsx
+```
+
+---
+
+## Getting Started
+
+```bash
+git clone <repo-url>
+cd PLAY-STORE
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser.
+
+---
+
+## Routes
+
+| Route | Page |
+|---|---|
+| `/` | Home — app listing |
+| `/app/:id` | App details |
+
+---
+
+## Sample Data
+
+```json
+{
+  "id": 1,
+  "name": "WhatsApp",
+  "category": "Social",
+  "rating": 4.8,
+  "image": "url",
+  "description": "Messaging app for communication"
+}
+```
+
+
+
+---
+
+<div align="center">
+
+Built with ❤️ for learning React & modern UI design
+
+</div>
